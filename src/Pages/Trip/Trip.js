@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 
 const Trip = (props) => {
     const { user } = useAuth();
+    const [deleted, setDeleted] = useState(false)
     const { title, description, img } = props.trip.trip;
 
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/trip/${id}`, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result);
+        const proceed = window.confirm('Are you sure want to cancel this trip ? ')
+        if (proceed) {
+            fetch(`http://localhost:5000/trip/${id}`, {
+                method: "DELETE"
             })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.deleteCount) {
+                        alert('Deleted Successfully')
+                        setDeleted(!deleted)
+                    }
+                    else {
+                        setDeleted(false)
+                    }
+                })
+        }
+
 
     }
 

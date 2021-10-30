@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
 import Login from './Login/Login';
+import About from './Pages/About/About';
 import AddPakages from './Pages/AddPakages/AddPakages';
 import BookTrip from './Pages/BookTrip/BookTrip';
 import Home from './Pages/Home/Home';
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path='/addpackage'>
               <AddPakages></AddPakages>
+            </Route>
+            <Route path='/about'>
+              <About></About>
             </Route>
             <PrivateRoute path='/booktrip/:tripId'>
               <BookTrip></BookTrip>
