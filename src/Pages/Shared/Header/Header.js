@@ -28,7 +28,6 @@ const Header = () => {
                             user.email && <Link to='/addpackage' class="mr-5 hover:text-gray-900">Add Trips</Link>
                         }
                         <Link to='/about' class="mr-5 hover:text-gray-900">About</Link>
-                        <Link to='/about' class="mr-5 hover:text-gray-900">Contact</Link>
 
                     </nav>
                     {

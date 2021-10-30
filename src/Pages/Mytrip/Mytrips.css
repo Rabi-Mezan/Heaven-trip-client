@@ -1,7 +1,14 @@
 .mytrips{
     margin: 20px 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-gap :20px;
     place-content: center;
+}
+
+@media screen and (max-width:680px){
+    .mytrips{
+        grid-template-columns: 1fr;
+        place-content: center;
+    }
 }

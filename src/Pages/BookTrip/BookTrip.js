@@ -36,17 +36,23 @@ const BookTrip = () => {
     }, [])
 
     return (
-        <div className='add-pakage  p-12'>
-            <p className='text-2xl font-bold text-center text-white'>{user.displayName} </p> <br />
-            <p className='text-2xl font-bold text-center -mt-5 mb-5 text-white'> You are almost ready to book our <span className='Font-bold text-3xl text-yellow-400'> {trip.title} </span>tour package !!</p>
-            <form className='form lg:w-1/3 m-auto' onSubmit={handleSubmit(onSubmit)}>
-                <input value={user.displayName} placeholder='name' {...register("name")} />
-                <input value={user.email} placeholder='email' {...register("email")} />
-                <input placeholder='phone' type="number" {...register("phone")} />
-                <input placeholder='date' type="date" {...register("date")} />
-                <input value={trip?.title} readOnly placeholder=' pakage name' {...register("title")} />
-                <input value='Proceed' className='hover:bg-yellow-500' type="submit" />
-            </form>
+        <div className=' add-pakage-page '>
+            <div className='add-pakage  p-12'>
+                <p className='text-2xl font-bold text-center text-white'>{user.displayName} </p> <br />
+                <p className='text-2xl font-bold text-center -mt-5 mb-5 text-white'> You are almost ready to book our <span className='Font-bold text-3xl text-yellow-400'> {trip.title} </span>tour package !!</p>
+                <div>
+                    <div>
+                        <form className='form lg:w-1/3 m-auto' onSubmit={handleSubmit(onSubmit)}>
+                            <input value={user.displayName} placeholder='name' {...register("name")} />
+                            <input value={user.email} placeholder='email' {...register("email")} />
+                            <input placeholder='phone' type="number" {...register("phone")} />
+                            <input placeholder='date' type="date" {...register("date")} />
+                            <input value={trip?.title} readOnly placeholder=' pakage name' {...register("title")} />
+                            <input value='Proceed' className='hover:bg-yellow-500' type="submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
