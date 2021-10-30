@@ -1,0 +1,41 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: last baseline;
+    position:relative;
+    top: 250px;
+    place-content: center;
+    text-align: center;
+}
+
+.catagories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.story {
+   /* height: 50vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+@media screen and (max-width:680px)  {
+    .catagories{
+        grid-template-columns: 1fr;
+    }
+    .catagories div{
+        margin: 10px;
+    }
+
+    .story{
+        grid-template-columns: 1fr;
+    }
+
+    .center{
+        top:200px
+    }
+    
+}

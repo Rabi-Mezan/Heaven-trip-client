@@ -1,0 +1,7 @@
+.mytrips{
+    margin: 20px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap :20px;
+    place-content: center;
+}
