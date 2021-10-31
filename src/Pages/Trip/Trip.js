@@ -1,12 +1,28 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const Trip = (props) => {
-    const { user } = useAuth();
-    const [deleted, setDeleted] = useState(false)
+    const { control, setControl } = props
     const { title, description, img } = props.trip.trip;
+    const history = useHistory()
 
+    // pending status update 
+    const handleUpdate = id => {
+        fetch(`http://localhost:5000/trip/${id}`, {
+            method: "PUT",
+            headers: { "content-type": "application.json" }
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.modifiedCount) {
+                    alert("Booking approved successfully")
+                    history.push('/mytrip')
+                }
+            })
+    }
 
+    // trip canceletion 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to cancel this trip ? ')
         if (proceed) {
@@ -15,12 +31,12 @@ const Trip = (props) => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    if (result.deleteCount) {
+                    if (result.deleteDCount) {
                         alert('Deleted Successfully')
-                        setDeleted(!deleted)
+                        setControl(!control)
                     }
                     else {
-                        setDeleted(false)
+                        setControl(false)
                     }
                 })
         }
@@ -39,8 +55,9 @@ const Trip = (props) => {
                 <small className='font-bold felx items-center mr-2'> <i class="far fa-calendar-alt  mr-2"></i>{props.trip.date}</small>
                 <p class="text-gray-600 text-sm">{description}</p>
                 <div className='flex justify-between mt-4'>
-                    <p className='font-bold text-green-400'>{props.trip.status}</p>
-                    <button onClick={() => handleDelete(props.trip._id)} className='book-btn'>Cancel</button>
+
+                    <button onClick={() => handleUpdate(props.trip._id)} className='book-btn'>{props.trip.status}</button>
+                    <button style={{ backgroundColor: "red", color: "white" }} onClick={() => handleDelete(props.trip._id)} className='book-btn'>Cancel</button>
                 </div>
             </div>
         </div>

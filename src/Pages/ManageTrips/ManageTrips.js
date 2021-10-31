@@ -1,22 +1,49 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
-import useAuth from '../../hooks/useAuth';
+
 
 const ManageTrips = () => {
     const [trips, setTrips] = useState([])
-    const { user } = useAuth();
+    const [control, setConrol] = useState(false);
     useEffect(() => {
         fetch('http://localhost:5000/managetrips')
             .then(res => res.json())
             .then(data => {
                 setTrips(data);
             })
-    }, [])
+    }, [control])
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm("Are you sure want to delete this item?")
+        if (proceed) {
+            fetch(`https://nameless-coast-33229.herokuapp.com/trip/${id}`, {
+                method: "DELETE",
+                headers: { "content-type": "application/json" }
+            })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.deletedCount) {
+                        alert('deleted successfully')
+                        setConrol(!control)
+                    }
+                    else {
+                        setConrol(false)
+                    }
+                })
+        }
+    }
+
     return (
         <div>
             <div>
-                <h1 style={{ color: "#737373" }} className='lg:text-4xl font-bold text-center my-10'>Manage All Trips</h1>
+                <h1 style={{ color: "#737373" }} className='lg:text-4xl font-bold text-center my-10'>Manage All Trips
+                    <br />  <small className='text-xs'>Total Trips Booked {trips.length}</small></h1>
+
             </div>
+
+
+
             {/* details tabel */}
             <div className='p-10'>
                 <div class="flex flex-col text-left">
@@ -148,8 +175,8 @@ const ManageTrips = () => {
                   font-medium
                 "
                                                     >
-                                                        <a href="" class="text-indigo-600 hover:text-indigo-900"
-                                                        >Delete</a
+                                                        <button onClick={() => handleDelete(trip._id)} class="text-indigo-600 hover:text-indigo-900"
+                                                        >Delete</button
                                                         >
                                                     </td>
                                                 </tr>

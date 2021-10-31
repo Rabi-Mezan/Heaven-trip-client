@@ -35,9 +35,9 @@ function App() {
             <Route path='/about'>
               <About></About>
             </Route>
-            <Route path='/managetrips'>
+            <PrivateRoute path='/managetrips'>
               <ManageTrips></ManageTrips>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path='/booktrip/:tripId'>
               <BookTrip></BookTrip>
             </PrivateRoute>
