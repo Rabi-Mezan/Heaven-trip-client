@@ -22,7 +22,7 @@ const Header = () => {
 
                         }
                         {
-                            user.email && <Link to='/mytrip' class="mr-5 hover:text-gray-900">Manage Trips</Link>
+                            user.email && <Link to='/managetrips' class="mr-5 hover:text-gray-900">Manage Trips</Link>
                         }
                         {
                             user.email && <Link to='/addpackage' class="mr-5 hover:text-gray-900">Add Trips</Link>

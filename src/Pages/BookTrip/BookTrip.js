@@ -11,7 +11,7 @@ const BookTrip = () => {
     const onSubmit = data => {
         data.trip = trip
         data.status = "pending"
-        fetch('http://localhost:5000/booktrip', {
+        fetch('https://nameless-coast-33229.herokuapp.com/booktrip', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)
@@ -27,7 +27,7 @@ const BookTrip = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${tripId}`)
+        fetch(`https://nameless-coast-33229.herokuapp.com/packages/${tripId}`)
             .then(res => res.json())
             .then(data => {
                 setTrip(data);

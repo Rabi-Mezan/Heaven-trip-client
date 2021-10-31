@@ -10,7 +10,7 @@ const Trip = (props) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to cancel this trip ? ')
         if (proceed) {
-            fetch(`http://localhost:5000/trip/${id}`, {
+            fetch(`https://nameless-coast-33229.herokuapp.com/trip/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

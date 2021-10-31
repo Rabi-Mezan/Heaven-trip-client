@@ -6,6 +6,7 @@ import About from './Pages/About/About';
 import AddPakages from './Pages/AddPakages/AddPakages';
 import BookTrip from './Pages/BookTrip/BookTrip';
 import Home from './Pages/Home/Home';
+import ManageTrips from './Pages/ManageTrips/ManageTrips';
 import Mytrip from './Pages/Mytrip/Mytrip';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Service from './Pages/Service/Service';
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route path='/about'>
               <About></About>
+            </Route>
+            <Route path='/managetrips'>
+              <ManageTrips></ManageTrips>
             </Route>
             <PrivateRoute path='/booktrip/:tripId'>
               <BookTrip></BookTrip>

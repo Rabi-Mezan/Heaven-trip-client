@@ -9,7 +9,7 @@ const Mytrip = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/trip/${user.email}`, {
+        fetch(`https://nameless-coast-33229.herokuapp.com/trip/${user.email}`, {
             method: "GET",
             headers: { "content-type": "application/json" }
         })

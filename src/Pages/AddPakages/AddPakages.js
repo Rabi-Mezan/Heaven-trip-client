@@ -8,7 +8,7 @@ const AddPakages = () => {
     const { register, reset, handleSubmit } = useForm();
     const onSubmit = data => {
         data.email = user?.email;
-        fetch('http://localhost:5000/addpackage', {
+        fetch('https://nameless-coast-33229.herokuapp.com/addpackage', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)
