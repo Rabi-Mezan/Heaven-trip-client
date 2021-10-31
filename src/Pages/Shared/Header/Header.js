@@ -17,10 +17,10 @@ const Header = () => {
                     </a>
                     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm justify-center">
                         <Link to='/home' class="mr-5 hover:text-gray-900">Home</Link>
-                        {
-                            user.email && <Link to='/mytrip' class="mr-5 hover:text-gray-900">My Trips</Link>
 
-                        }
+                        <Link to='/mytrip' class="mr-5 hover:text-gray-900">My Trips</Link>
+
+
                         {
                             user.email && <Link to='/managetrips' class="mr-5 hover:text-gray-900">Manage Trips</Link>
                         }

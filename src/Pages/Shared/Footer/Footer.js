@@ -43,8 +43,8 @@ const Footer = () => {
                     </ul>
 
                 </div>
-                <div>
-                    <img className='w-2/3' src={img} alt="" />
+                <div className='m-auto'>
+                    <img className='lg:w-2/3' src={img} alt="" />
                 </div>
             </div>
         </div>

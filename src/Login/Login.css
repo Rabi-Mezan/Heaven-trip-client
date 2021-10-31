@@ -47,5 +47,6 @@
     .login-page  div{
         flex-direction: column;
         justify-content: center;
+        height: auto;
     }
   }

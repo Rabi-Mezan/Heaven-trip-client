@@ -35,6 +35,6 @@
 
  @media screen and (max-width:680px){
      .add-pakage{
-         height: 60vh;
+         height: auto
      }
  }

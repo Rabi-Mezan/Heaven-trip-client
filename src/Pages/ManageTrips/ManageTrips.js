@@ -147,9 +147,10 @@ const ManageTrips = () => {
                                                         <div class="text-sm text-gray-900">{trip.title}</div>
                                                         <div class="text-sm text-gray-500">${trip.trip.price}</div>
                                                     </td>
-                                                    <td class="px-6 py-4 whitespace-nowrap">
-                                                        <span
-                                                            class="
+                                                    <button>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            <span
+                                                                class="
                     px-2
                     inline-flex
                     text-xs
@@ -159,10 +160,11 @@ const ManageTrips = () => {
                     bg-green-100
                     text-green-800
                   "
-                                                        >
-                                                            {trip.status}
-                                                        </span>
-                                                    </td>
+                                                            >
+                                                                {trip.status}
+                                                            </span>
+                                                        </td>
+                                                    </button>
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                         {trip.date}
                                                     </td>

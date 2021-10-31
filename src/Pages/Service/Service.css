@@ -30,9 +30,7 @@
     padding: 5px 15px;
     margin-bottom: 5px;
 }
-.book-btn:hover{
-    background-color: rgb(72, 238, 86);
-}
+
 
 
 @media screen and (max-width:680px){

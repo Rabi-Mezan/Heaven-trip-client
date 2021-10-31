@@ -4,7 +4,7 @@ const Story = () => {
     return (
 
         <div className='story'>
-            <div className='lg:px-24 px-10 pt-16 mb-10 '>
+            <div className='lg:px-24 px-10  pt-16 mb-10 '>
                 <h1 className='lg:text-5xl text-3xl font-bold' style={{ color: "#737373" }}>21 Years of Experiences
                     In Tourism Business</h1>
                 <br />

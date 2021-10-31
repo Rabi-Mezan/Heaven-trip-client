@@ -60,7 +60,7 @@ const Trip = (props) => {
                 <p class="text-gray-600 text-sm">{description}</p>
                 <div className='flex justify-between mt-4'>
 
-                    <button onClick={() => handleUpdate(props.trip._id)} className={props.trip.status === "Apporoved" ? 'approved ' : 'book-btn'}>{props.trip.status}</button>
+                    <button onClick={() => handleUpdate(props.trip._id)} className={props.trip.status === "Approved" ? 'approved ' : 'pending'}>{props.trip.status}</button>
                     <button onClick={() => handleDelete(props.trip._id)} className='cancel-button hover:bg-red-600 hover:text-white'>Cancel</button>
                 </div>
             </div>
