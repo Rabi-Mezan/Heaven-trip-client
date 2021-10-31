@@ -26,8 +26,7 @@ const Services = () => {
     return (
         <div id='packages' className='mt-28 mb-20'>
             <h1 style={{ color: "#737373" }} className='lg:text-5xl text-3xl font-bold text-center'>Our Tour Packages</h1>
-            <p className='text-center mt-5 px-5 lg:text-sm text-xs'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam noempor invidunt
-                ut labore et dolore magna aliquyam erat</p>
+            <p className='text-center mt-5 px-5 lg:text-sm text-xs w-2/3 m-auto'>Where can you still book, how can you skip some lineups, and are there any ways to save some money while still getting the experience you want – we tackle all of these questions and more.</p>
             <div className='flex justify-center mt-10 lg:ml-20 md:ml-10 services' >
                 {
                     services.map(service => <Service
