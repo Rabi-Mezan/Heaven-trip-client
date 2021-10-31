@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const Trip = (props) => {
-    const { control, setControl } = props
+    const [control, setControl] = props.setControl
     const { title, description, img } = props.trip.trip;
     const history = useHistory()
 
@@ -17,7 +17,11 @@ const Trip = (props) => {
             .then(result => {
                 if (result.modifiedCount) {
                     alert("Booking approved successfully")
+                    setControl(!control)
                     history.push('/mytrip')
+                }
+                else {
+                    setControl(false)
                 }
             })
     }
@@ -31,7 +35,7 @@ const Trip = (props) => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    if (result.deleteDCount) {
+                    if (result.deletedCount) {
                         alert('Deleted Successfully')
                         setControl(!control)
                     }

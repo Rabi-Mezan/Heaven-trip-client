@@ -15,7 +15,7 @@ const Header = () => {
                     <a href class="flex title-font font-medium items-center text-gray-900 mx-0 mb-4 md:mb-0">
                         <img className='w-28' src={logo} alt="" />
                     </a>
-                    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm justify-center">
                         <Link to='/home' class="mr-5 hover:text-gray-900">Home</Link>
                         {
                             user.email && <Link to='/mytrip' class="mr-5 hover:text-gray-900">My Trips</Link>

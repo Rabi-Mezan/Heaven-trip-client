@@ -31,7 +31,7 @@ const Mytrip = () => {
             <div className='mytrips w-full'>
                 {
                     myTrips.map(trip => <Trip
-                        setControl={setControl}
+                        setControl={[control, setControl]}
                         key={trip._id}
                         trip={trip}
                     ></Trip>)

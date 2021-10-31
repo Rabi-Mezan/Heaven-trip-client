@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './BookTrip.css'
 
@@ -8,6 +8,7 @@ const BookTrip = () => {
     const [trip, setTrip] = useState({})
     const { tripId } = useParams();
     const { user } = useAuth();
+    const history = useHistory();
     const { register, reset, handleSubmit } = useForm();
     const onSubmit = data => {
         data.trip = trip
@@ -23,6 +24,7 @@ const BookTrip = () => {
                 if (result.insertedId) {
                     alert('Booking Successfull')
                     reset();
+                    history.push('/home')
                 }
             })
     }
@@ -33,6 +35,7 @@ const BookTrip = () => {
             .then(data => {
                 setTrip(data);
                 reset()
+
             })
     }, [])
 
