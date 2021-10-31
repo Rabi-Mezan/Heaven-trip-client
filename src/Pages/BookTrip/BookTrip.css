@@ -46,4 +46,7 @@ flex-direction: column;
       margin: 20px;
       padding: 30px;
    }
+   .book-trip{
+      height: 70vh;
+   }
 }

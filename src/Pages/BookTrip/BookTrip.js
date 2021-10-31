@@ -24,7 +24,7 @@ const BookTrip = () => {
                 if (result.insertedId) {
                     alert('Booking Successfull')
                     reset();
-                    history.push('/home')
+                    history.push('/mytrip')
                 }
             })
     }
@@ -42,7 +42,7 @@ const BookTrip = () => {
     return (
         <div className=' book-trip-page '>
             <div className='lg:w-2/4 trip-details flex flex-col justify-center items-center'>
-                <img className='w-80 h-80 p-5 border-2 border-gray-500 rounded-full mb-5' src={trip.img} alt="" />
+                <img className='w-80 h-80 p-5 border-2 border-gray-500 lg:rounded-full mb-5' src={trip.img} alt="" />
                 <p className='flex justify-between text-xl font-bold'>{trip.title} <span className='ml-10 text-yellow-400'>${trip.price}</span></p>
                 <p className='text-sm text-center w-2/3 mt-2'>{trip.description}</p>
 

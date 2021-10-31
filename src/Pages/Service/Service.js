@@ -17,7 +17,7 @@ const Service = (props) => {
                 <p className='text-xs my-3 w-40'>{description}</p>
                 <p className='font-bold my-2'>${price}</p>
                 <Link to={`/booktrip/${_id}`}>
-                    <button className='book-btn'>Book Now</button>
+                    <button className='book-btn hover:bg-green-700 hover:text-white'>Book Now</button>
                 </Link>
             </div>
         </div>

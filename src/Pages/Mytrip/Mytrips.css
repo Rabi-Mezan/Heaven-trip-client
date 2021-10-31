@@ -1,14 +1,16 @@
 .mytrips{
-    margin: 20px 30px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-gap :20px;
+    grid-gap :10px;
     place-content: center;
 }
 
 @media screen and (max-width:680px){
     .mytrips{
-        grid-template-columns: 1fr;
-        place-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

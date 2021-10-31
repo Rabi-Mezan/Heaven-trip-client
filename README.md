@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Heaven Trip
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Heaven Trip is a tour and trip offering website where one can book a trip plan from various trip plans they offer . You can even manage , add and cancel trip plans in this website.
 
-## Available Scripts
+This project was bootstrapped with [Create React App](https://heaven-trip-95a98.web.app/home).
+
+## This website is for booking tour 
+## You can add new tour package 
+## you can manage trips 
+## you can cancel your booked trip 
+## you can update your booking status from pending to approved 
 
 In the project directory, you can run:
 

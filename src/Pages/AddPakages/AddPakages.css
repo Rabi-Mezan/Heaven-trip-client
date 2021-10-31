@@ -31,3 +31,10 @@
  .form .proceed-btn:hover{
     background-color: #F2CB05;
  }
+
+
+ @media screen and (max-width:680px){
+     .add-pakage{
+         height: 60vh;
+     }
+ }
