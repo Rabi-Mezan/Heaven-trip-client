@@ -1,15 +1,15 @@
 
 .add-pakage{
-    background-color: #282828;
-    height: 80vh;
+    background-color:#f4f4f4;
+    height: 100vh;
 }
 
 .form input{
     border: 1px solid black;
     margin: 5px;
-    background-color: #282828;
-    border: 3px solid white;
-    color: white;
+    background-color: #f4f4f4;
+    border: 3px solid gray;
+    color: black;
     font-size: 14px;
     height: 35px;
     padding: 5px 10px;
@@ -21,3 +21,13 @@
     flex-direction: column;
    
 }
+
+
+.form .proceed-btn{
+    border: none;
+    background-color: #F2C230;
+ }
+ 
+ .form .proceed-btn:hover{
+    background-color: #F2CB05;
+ }

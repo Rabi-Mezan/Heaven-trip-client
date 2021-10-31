@@ -5,7 +5,7 @@ import img from '../../../images/Trip-bro.png'
 
 const Footer = () => {
     return (
-        <div className='mt-20'>
+        <div className=''>
             <div className='lg:flex justify-around md:p-20 items-center footer-title'>
                 <h1 className='lg:text-3xl text-2xl font-bold  text-white'> Make A Trip  <span className='lg:text-4xl font-bold text-yellow-500'>To the Heaven</span></h1>
                 <div className='lg:flex  justify-between items-center'>

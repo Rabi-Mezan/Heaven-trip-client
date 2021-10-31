@@ -9,7 +9,7 @@ const Trip = (props) => {
 
     // pending status update 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/trip/${id}`, {
+        fetch(`https://nameless-coast-33229.herokuapp.com/trip/${id}`, {
             method: "PUT",
             headers: { "content-type": "application.json" }
         })

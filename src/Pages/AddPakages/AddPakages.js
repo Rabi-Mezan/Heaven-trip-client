@@ -24,13 +24,13 @@ const AddPakages = () => {
 
     return (
         <div className='add-pakage p-20'>
-            <h1 className='text-2xl font-bold text-center mb-5 text-white'>Add New Pakages</h1>
-            <form className='form lg:w-1/3 m-auto' onSubmit={handleSubmit(onSubmit)}>
+            <h1 className='text-gray-400 font-bold lg:text-4xl text-2xl mb-10  text-center'>Add New Packages</h1>
+            <form className='form lg:w-96 m-auto' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='pakage title' {...register("title")} />
                 <input placeholder='pakage description' {...register("description")} />
                 <input placeholder=' image url' {...register("img")} />
                 <input placeholder=' price' type="number" {...register("price")} />
-                <input className='hover:bg-yellow-500' type="submit" />
+                <input className='proceed-btn' type="submit" />
             </form>
         </div>
     );

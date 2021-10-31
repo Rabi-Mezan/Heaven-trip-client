@@ -1,3 +1,31 @@
-.add-pakage{
+.book-trip{
+   background-color:#f4f4f4;
+   height: 100vh;
+}
+
+.book input{
+   border: 1px solid black;
+   margin: 5px;
+   background-color: #f4f4f4;
+   border: 3px solid gray;
+   color: black;
+   font-size: 14px;
+   height: 35px;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+.book{
    display: flex;
+   flex-direction: column;
+  
+}
+
+.book .proceed-btn{
+   border: none;
+   background-color: #F2C230;
+}
+
+.book .proceed-btn:hover{
+   background-color: #F2CB05;
 }

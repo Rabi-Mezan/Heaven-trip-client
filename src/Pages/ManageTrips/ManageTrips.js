@@ -6,7 +6,7 @@ const ManageTrips = () => {
     const [trips, setTrips] = useState([])
     const [control, setConrol] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/managetrips')
+        fetch('https://nameless-coast-33229.herokuapp.com/managetrips')
             .then(res => res.json())
             .then(data => {
                 setTrips(data);

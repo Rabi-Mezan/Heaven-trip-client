@@ -24,11 +24,11 @@ const Services = () => {
     // };
 
     return (
-        <div id='packages' className='mt-28'>
-            <h1 style={{ color: "#737373" }} className='text-5xl font-bold text-center'>Our Tour Packages</h1>
-            <p className='text-center mt-5 px-5 text-sm'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam noempor invidunt
+        <div id='packages' className='mt-28 mb-20'>
+            <h1 style={{ color: "#737373" }} className='lg:text-5xl text-3xl font-bold text-center'>Our Tour Packages</h1>
+            <p className='text-center mt-5 px-5 lg:text-sm text-xs'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam noempor invidunt
                 ut labore et dolore magna aliquyam erat</p>
-            <div className='flex justify-center lg:ml-20 md:ml-10 services' >
+            <div className='flex justify-center mt-10 lg:ml-20 md:ml-10 services' >
                 {
                     services.map(service => <Service
                         key={service._id}

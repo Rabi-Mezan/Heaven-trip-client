@@ -9,7 +9,7 @@ const Service = (props) => {
 
 
     return (
-        <div className='flex justify-center items-center flex-col mt-20 service lg:mr-10'>
+        <div className='flex justify-center items-center flex-col lg:mt-20 service lg:mr-10'>
 
             <img className='lg:w-full  ' src={img} alt="" />
             <div className='title text-left service-text'>
