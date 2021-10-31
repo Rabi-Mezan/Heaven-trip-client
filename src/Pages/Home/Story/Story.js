@@ -16,7 +16,7 @@ const Story = () => {
                     Between anecdotal evidence at airports across the country and what we’re seeing in Heaven Trip's booking data, the holiday travel period this year is shaping up to be one of the busiest in quite some time..</p>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1587445103983-b8aa08421e14?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHRvdXJpc20lMjBidXNpbmVzc3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="" />
+                <img className=' w-full' src="https://images.unsplash.com/photo-1501963917309-56546c33e19d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMGJsdWUlMjAlMjBuYXR1cmV8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="" />
             </div>
         </div>
     );

@@ -44,7 +44,7 @@ const BookTrip = () => {
                 <p className='text-sm text-center w-2/3 mt-2'>{trip.description}</p>
 
             </div>
-            <div className='book-trip lg:w-2/4 p-12'>
+            <div className='book-trip  lg:w-2/4 p-12'>
                 <p className='text-2xl font-bold text-center text-gray-400'>{user.displayName} </p> <br />
                 <p className='text-gray-400 font-bold lg:text-2xl text-xl mb-5  text-center'> You are almost ready to book <br /> our <span className='Font-bold text-3xl text-yellow-400'> {trip.title} </span>tour package !!</p>
                 <div>
